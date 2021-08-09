@@ -1,0 +1,133 @@
+.contain{
+    max-width:375px;
+    margin:auto;
+    height:auto;
+    background-color: white;
+    box-shadow: 3px 3px 10px rgb(71, 61, 100);
+    box-sizing:border-box;
+    border-radius: 20px;
+    overflow: hidden;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+body{
+    background-color: powderblue;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 13px;
+  
+}
+.drawer
+{
+    width:100%;
+    object-fit: cover;
+}
+.profile img{
+    width:40px;
+    height:40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.share
+{
+    width:30px;
+    height:30px;
+    background-color: rgb(201, 195, 195);
+    border-radius: 50%;
+    display: flex;
+    padding: 1px;
+    justify-content: center;
+    align-items: center;
+margin-left: auto;
+margin-right: 10px;
+position: relative;
+}
+.last
+{
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    position: relative;
+}
+.name,.profile,.hover-comp{
+    margin-left: 20px;
+}
+.heading,#name{
+    font-weight: bolder;
+}
+.last:hover .hover{
+  visibility: visible;
+}
+.heading,.para{
+    padding: 0 20px;
+}
+.hover{
+    position: absolute;
+    visibility: hidden;
+    display: flex;
+    background-color: rgb(35, 19, 53);
+    width:100%;
+    justify-content: center;
+    align-items: center;
+    color: whitesmoke;
+    height:100%;
+    z-index: 1;
+}
+.hover1{
+    display: none;
+    background-color:rgb(35, 19, 53) ;
+    color: whitesmoke;
+    border:none;
+}
+@media screen and (min-width:600px) {
+    .contain{
+        display: flex;
+        max-width:1440px;
+        overflow: visible;
+    }
+    .column1
+    {
+        flex:30%;
+        overflow: hidden;
+        border-radius: 20px 0 0 20px;
+    }
+    .column
+    {
+        flex:70%;
+    }
+  .drawer{
+      height:100%;
+  }
+  .share:hover .hover1
+  {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    width:210px;
+    left:50%;
+    height:auto;
+    bottom:130%;
+    border-radius: 10px;
+    margin-left:-105px;
+
+  }
+  .hover1::after{
+ position: absolute;
+ content:"";
+ top:100%;
+ left:50%;
+ border-width: 10px;
+ margin-left: -10px;
+ border-style: solid;
+ border-color: rgb(35, 19, 53) transparent transparent transparent;
+  }
+  .hover{
+      display: none;
+  }
+  .hover-comp{
+      margin-right: 10px;
+  }
+    
+}
